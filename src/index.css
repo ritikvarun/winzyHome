@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(22, 26, 24, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .glass-panel-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-panel-hover:hover {
+    background: rgba(30, 36, 33, 0.75);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .accent-gradient-btn {
+    background: linear-gradient(135deg, #FF3838 0%, #E01B22 100%);
+    box-shadow: 0 4px 20px rgba(224, 27, 34, 0.35);
+  }
+  
+  .accent-gradient-btn:hover {
+    background: linear-gradient(135deg, #FF4D4D 0%, #F0242B 100%);
+    box-shadow: 0 6px 28px rgba(224, 27, 34, 0.5);
+  }
+}
+
+/* Custom animations */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e100f;
+}
+::-webkit-scrollbar-thumb {
+  background: #252b28;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363e3a;
+}
